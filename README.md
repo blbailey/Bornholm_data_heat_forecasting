@@ -8,7 +8,7 @@ Bornholm_meter_fetch.py is to fetch around 4000 meters data from energydataDK vi
 Bornholm_meter_prepare.py is to align the time stamps for different time series, remove the outliers;
 Bornholm_meter_select.py is to rule out the meters with too many missing data samples and to fill the missing values for remained ones;
 # weather data
-new_fetch.py is to fetch the weather forecasts from norwegian meterological institute via API;
+bornholm_data_weather_fetch.py is to fetch the weather forecasts from norwegian meterological institute via API;
 bornholm_weather.py is to fill the missing data; (cleaning is not required since they are forecasts);
 # data modeling
 helpers.py provides all the functions and global variables are required for bornholm_forecast_sklearn.py, bornholm_forecast_sklearn_1.py and bornholm_forecast_feature_selection.py.
