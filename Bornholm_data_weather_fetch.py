@@ -180,7 +180,7 @@ def fetch_one_month(start, stop):
     for var in variables:
         df = pd.DataFrame(res[variables.index(var), :, :], index, col_names)
 
-        filename = "Bornholm_"+var +"_"+YYYY+MM +'.csv'
+        filename = "./Bornholm_weather/"+var +"_"+YYYY+MM +'.csv'
         df.to_csv(filename)
 
 
