@@ -68,10 +68,8 @@ for k, addr in enumerate(addrs):
     null_nums.append(null_num)
 df_sum['heat']= sumx
 
-# df_sum.to_csv("bornholm_aggre_2021.csv")
 
 
-#
 
 
 # D:\OneDrive\OneDrive - Danmarks Tekniske Universitet\energydataDTU\venv\bornholm2021\Bornholm_hourly_forecast_online_hyperpara.py
@@ -83,90 +81,7 @@ df_merge=pd.merge(df_sum, wea, how='left', left_on='timestamp',right_on='time')
 df_merge=df_merge.iloc[24:,:]
 print(df_merge.columns)
 df_merge=df_merge.set_index('time')
-df_merge.to_csv("Bornholm_wea_heat1.csv")
-
-#
-#
-
-
-#
-# null_sum=0
-# shape_arr=[]
-# for addr in addrs:
-#     dy = pd.read_csv(addr, index_col='timestamp');
-#     dy.index = pd.to_datetime(dy.index)
-#     shape_arr.append(dy.shape[0])
-#     print(dy.index[0])
-#     if dy['heat'].isnull().sum()==1:
-#         null_sum=null_sum+1
+df_merge.to_csv("Bornholm_wea_heat.csv")
 
 
 
-
-#
-#
-# digits=np.array(digits)
-# dig_uni=np.unique(digits)
-#
-#
-#
-# dy = pd.read_csv(addrs[0], index_col='timestamp');
-# dy.index = pd.to_datetime(dy.index)
-# #
-# for digs in dig_uni:
-#     df_sum=pd.DataFrame(columns=['heat'], index=dy.index)
-#     sumx=np.zeros(shape=dy.shape)
-#     num=0
-#     for i in range(len(addrs)):
-#         if digits[i]==digs:
-#         # k=np.random.randint(low=0, high=len(addrs))
-#             addr=addrs[i]
-#
-#             dy = pd.read_csv(addr, index_col='timestamp');
-#             dy.index = pd.to_datetime(dy.index)
-#             # if dy['heat'].mean()>=0.01:
-#             #     dy.to_csv(DIR3+addr[-12:])
-#             #     num=num+1
-#             #     dy1=dy
-#                 # dy.plot()
-#             #
-#             #
-#             #
-#             # dy.plot()
-#             sumx=sumx+dy.to_numpy()
-#     #
-#     #
-#
-#     df_sum['heat']=sumx
-#     print(df_sum.info())
-#     plt.figure()
-#     plt.plot(df_sum)
-#     plt.ylabel(str(digs))
-#     plt.xlabel("time")
-#
-# # df_sum.to_csv("bornholm_sum.csv")
-#
-# # df_sum=pd.read_csv("bornholm_sum.csv")
-# # df_sum=df_sum.set_index('time')
-# # df_sum.index=pd.to_datetime(df_sum.index)
-# # df_sum.plot(linewidth=3)
-# # plt.ylabel("Heat (MW)")
-# #
-#
-#
-
-
-# ====================================
-# wea=pd.read_csv(direc)
-# wea=wea.set_index('time')
-# wea.index=pd.to_datetime(wea.index)
-#
-# df_sum=pd.read_csv("bornholm_sum.csv")
-# df_sum=df_sum.set_index('time')
-# df_sum.index=pd.to_datetime(df_sum.index)
-#
-# df_merge = pd.merge(left=df_sum, left_index=True,
-#                   right=wea, right_index=True,
-#                   how='inner')
-#
-# df_merge.to_csv("bornholm_weather_heat.csv")
