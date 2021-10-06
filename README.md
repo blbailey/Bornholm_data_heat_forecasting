@@ -4,9 +4,9 @@ In the whole project, the day-ahead hourly heat load forecasting is made based o
 
 In this work, we also added the steps before modeling, including data fetching and cleaning.
 # heat load data
-Bornholm_meter_fetch.py is to fetch around 4000 meters data from energydataDK via API;
-Bornholm_meter_prepare.py is to align the time stamps for different time series, remove the outliers;
-Bornholm_meter_select.py is to rule out the meters with too many missing data samples and to fill the missing values for remained ones;
+1. Bornholm_meter_fetch.py is to fetch around 4000 meters data from energydataDK via API;
+2. Bornholm_meter_prepare.py is to align the time stamps for different time series, remove the outliers;
+3. Bornholm_meter_select.py is to rule out the meters with too many missing data samples and to fill the missing values for remained ones;
 # weather data
 bornholm_data_weather_fetch.py is to fetch the weather forecasts from norwegian meterological institute via API;
 bornholm_weather_aggregate.py is to aggregate the monthly data into a single file and to fill the missing data; (cleaning is not required since they are forecasts);
