@@ -8,13 +8,15 @@ In this work, we also added the steps before modeling, including data fetching a
 2. Bornholm_meter_prepare.py is to align the time stamps for different time series, remove the outliers;
 3. Bornholm_meter_select.py is to rule out the meters with too many missing data samples and to fill the missing values for remained ones;
 # weather data
-bornholm_data_weather_fetch.py is to fetch the weather forecasts from norwegian meterological institute via API;
-bornholm_weather_aggregate.py is to aggregate the monthly data into a single file and to fill the missing data; (cleaning is not required since they are forecasts);
+4. Bornholm_data_weather_fetch.py is to fetch the weather forecasts from norwegian meterological institute via API;
+5. Bornholm_weather_aggregate.py is to aggregate the monthly data into a single file and to fill the missing data; (cleaning is not required since they are forecasts);
+6. Bornholm_data_aggregation_zones.py is to aggregate heat and weather data into a singel file;
 # data modeling
-helpers.py provides all the functions and global variables are required for bornholm_forecast_sklearn.py, bornholm_forecast_sklearn_1.py and bornholm_forecast_feature_selection.py.
-helpers_online.py provides all the functions and global variables for bornholm_forecast_online.py and bornholm_forecast_online_hyperpara.py.
-Bbornholm_forecast_feature_selection.py is to present the feature selection results.
-Bornholm_forecast_sklearn is for neural network based models by using TensorFlow package.
-Bornholm_forecast_sklearn1 is for machine learning models by using SK-learn package.
-Bornholm_forecast_online is for RLS and RML online learning models.
-Bornholm_forecast_online_hyperpara is to get the optimal hyperparameters by evaluating the performance on the validation dataset.
+7. helpers.py provides all the functions and global variables are required for Bornholm_forecast_sklearn.py, Bornholm_forecast_sklearn_1.py and Bornholm_forecast_feature_selection.py;
+8. helpers_online.py provides all the functions and global variables for Bornholm_forecast_online.py and Bornholm_forecast_online_hyperpara.py;
+9. Bornholm_forecast_feature_selection.py is to present the feature selection results;
+10. Bornholm_forecast_sklearn is for neural network based models by using TensorFlow package;
+11. Bornholm_forecast_sklearn1 is for machine learning models by using SK-learn package;
+12. Bornholm_forecast_online_hyperpara is to get the optimal hyperparameters by evaluating the performance on the validation dataset;
+13. Bornholm_forecast_online is for RLS and RML online learning models.
+
