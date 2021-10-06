@@ -82,8 +82,8 @@ test_df = df1.iloc[N_train:,:]
 
 
 
-train_df_max = train_df.max()
-train_df_min = train_df.min()
+train_df_max = df.max()
+train_df_min = df.min()
 
 HEAT_MAX_REAL=train_df_max[['heat-lag-0','heat-lag-24','heat-lag-25']].max()
 HEAT_MIN_REAL=train_df_min[['heat-lag-0','heat-lag-24','heat-lag-25']].min()
