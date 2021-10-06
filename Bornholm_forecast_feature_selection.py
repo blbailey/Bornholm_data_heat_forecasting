@@ -25,9 +25,7 @@ import matplotlib.pyplot as plt
 from helpers import add_day_week_features, data_gene, feature_selection, LAG_DICT, SHIFT_HEAT, LAG_DICT1, SHIFT_HEAT1
 
 # the address should change depending on your local location of the file
-df1_ww = pd.read_csv('D:\\OneDrive\\OneDrive - Danmarks Tekniske '
-                     'Universitet\\energydataDTU\\venv\\bornholm2021'
-                     '\\Bornholm_wea_heat.csv', sep=',', index_col=0)
+df1_ww = pd.read_csv('\\Bornholm_wea_heat.csv', sep=',', index_col=0)
 
 #  load files
 df1_ww.index = pd.to_datetime(df1_ww.index)
